@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+i{
+    color: white;
+    font-size: 4em;
+}
+
+#cursor-dot {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    pointer-events: none;
+    z-index: 3;
+    border-radius: 50%;
+    transform: translate(-50%, 10%) scale(1); /* Center horizontally and move down by 10% of dot's height */
+    transform-origin: center; /* Center the transformation origin */
+    transition: transform 0.1s ease; /* Transition the transform property */
+}
+
+
+/* Navbar styles */
+.navbar {
+    padding-top: 20px;
+    color: white;
+    text-align: center;
+
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    padding: 0px 20px 0px 0px;
+    transition: .3s
+}
+
+.navbar ul li:hover{
+scale: 1.2;
+}
+
+
+.navbar a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Text animation styles */
+.text.sec-text:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border-left: 2px solid rgb(255, 255, 255);
+    animation: animate 4s steps(12) infinite;
+}
+
+@keyframes animate {
+    40%, 60% {
+        left: calc(100% + 4px);
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+.container {
+    width: 100%;
+    overflow: hidden;
+    color: white;
+    
+}
+
+.container .text {
+    position: relative;
+}
+
+/* Hero section styles */
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size:2rem;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: bold;
+    z-index: 2;
+}
+.hero-heading{
+    font-size: 3rem;
+}
+
+.header {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), black), url('./assets/backgrounds/hero.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+.rest-wrapper{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgb(14, 2, 46));
+    background-size: cover;
+    background-position: center;
+    
+}
+
+
+.ring{
+    margin-top: -2%;
+    position: relative;
+    margin-left: 85%;
+    width: 12%;
+    height: 20%;
+
+}
+
+.circle{
+    margin-bottom: -15%;
+    margin-left: 2%;
+    position: relative;
+    width: 12%;
+    height: 20%;
+}
+
+.container {
+    margin-top: 10px;
+}
+
+.hero h1,
+.text.sec-text {
+    color: #fff; /* Text color on top of the background image */
+}
+
+
+
+.container {
+    margin-top: 10px;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+
+}
+
+
+/* Styles for the scroll icon */
+.scroll-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fade-in 5s; /* Animation to fade in after 2 seconds */
+}
+
+.mouse {
+    width: 24px;
+    height: 38px;
+    border: 2px solid #fff;
+    border-radius: 14px;
+    position: relative;
+}
+
+.wheel {
+    width: 4px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 2px;
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    animation: wheel-spin 2s linear infinite; /* Animation to make the wheel spin */
+}
+
+.scroll-icon-hidden {
+    display: none;
+  }
+  
+
+/* Keyframes for animations */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes wheel-spin {
+    0% {
+        transform: translateX(-50%) translateY(50%);
+        transition: .2s;
+    }
+    100% {
+        transform: translateX(-50%) translateY(-100%);
+        transition: 0.2s;
+    }
+}
+
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 20px 100px 0 20px;
+}
+
+.about-text {
+    width: 45%; /* Adjust the width of the text column */
+}
+
+.about-text h2{
+    font-size: 3rem;
+    color: white;
+}
+
+.about-text h2 {
+    margin-left: 40%;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.right-about p{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25rem;
+    text-align: left;
+    color: silver;
+}
+
+.right-about button{
+    margin-top: 40px;
+    background: transparent;
+    outline: none;
+    border: 4px solid #8575f1;
+    border-radius: 37px;
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 20px;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.right-about button:hover{
+    scale: 1.1;
+}
+
+.right-about button a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.right-about {
+    width: 45%; /* Adjust the width of the image column */
+}
+
+
+/* Portfolio section styles */
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Hide the overflowing parts of the images */
+}
+
+.left-image,
+.right-image {
+    position: absolute;
+    top: 0;
+    width: 60%; /* Set the width to 60% for each image */
+    height: 100%; /* Make the images cover the entire height */
+    z-index: 1;
+    pointer-events: none;
+   
+}
+
+.left-image {
+    left: 0; /* Position the left image on the left side */
+}
+
+.right-image {
+    right: 0; /* Position the right image on the right side */
+}
+
+
+.portfolio-card {
+    flex: 1;
+    max-width: calc(30% - 10px);
+    background-color: transparent;
+    padding: 20px;
+   z-index: 4;
+    border-radius: 15px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px;
+    color: white;
+    position: relative;
+}
+
+.portfolio span{
+    color: white;
+    font-size: 2rem;
+}
+
+.portfolio-card img{
+  width: 100%;
+  border-radius: 15px;
+  height: auto;
+  border: 2px solid white;
+}
+
+.portfolio-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.portfolio h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: white;
+}
+
+.portfolio-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.portfolio-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+
+/* Skills section styles */
+.skills {
+    margin-top: 100px;
+    text-align: center;
+    padding: 50px 0;
+    color: white;
+    position: relative;
+}
+
+.skills h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.skills-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-card {
+    flex: 1;
+    max-width: calc(35% - 10px);
+    background: rgba;
+    padding: 57px 32px;
+    background: rgba(255, 255, 255, 0.01);
+    border-radius: 50px;
+    margin: 10px;
+    text-align: center;
+   z-index: 9;
+    box-shadow: inset 0 39px 56px -56px rgba(255, 255, 255, 0.25), inset 0 7px 21px 0 rgba(255, 255, 255, 0.2), inset 0 -82px 68px 0 rgba(96, 68, 144, 0.18), inset 0 -98px 100px -108px rgba(202, 172, 255, 0.1), inset 0 4px 18px 0 rgba(154, 146, 210, 0.15), inset 0 1px 40px 0 rgba(227, 222, 255, 0.15);
+}
+
+.skill-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.skill-card p {
+    font-size: 1rem;
+}
+
+/* Programming Languages section styles */
+.languages {
+    text-align: center;
+    position: relative;
+   margin: 150px 0px;
+}
+
+.languages h2 {
+    font-size: 2rem;
+    margin-bottom: 70px;
+    color: white;
+}
+
+.languages .lang-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.languages .lang-container .glass{
+    z-index: 12;
+    position: relative;
+    width: 200px;
+    height: 240px;
+    box-shadow: inset 0 39px 56px -56px rgba(255, 255, 255, 0.25), inset 0 7px 21px 0 rgba(255, 255, 255, 0.2), inset 0 -82px 68px 0 rgba(96, 68, 144, 0.18), inset 0 -98px 100px -108px rgba(202, 172, 255, 0.1), inset 0 4px 18px 0 rgba(154, 146, 210, 0.15), inset 0 1px 40px 0 rgba(227, 222, 255, 0.15);
+    background: rgba(255, 255, 255, 0.01);
+    display: flex;
+    backdrop-filter: blur(10px);
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    border-radius: 10px;
+    margin: 0 -45px;
+    transform: rotate(calc(var(--r) * 1deg));
+}   
+
+.lang-container:hover .glass{
+    transform: rotate(0deg);
+    margin: 0 20px;
+}
+
+.lang-container .glass::before{
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    color: white;
+}
+
+
+.footer {
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.footer li{
+    transition: .3s;
+}
+
+.footer ul li:hover{
+    scale: 1.2;
+}
+    
+    
+.footer a{
+        text-decoration: none;
+        color: white;
+}
+
+.footer-nav ul li {
+    padding: 0 20px;
+}
+
+.copyright {
+    margin-top: 30px; /* Adjust the space between navbar and copyright */
+}
+
+
+
