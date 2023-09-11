@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="https://khushhalsharma.vercel.app">Home</a></li>
+            <li><a href='https://khushhalsharma.vercel.app/#about'>About</a></li>
+            <li><a href='https://khushhalsharma.vercel.app/#services'>Services</a></li>
+            <li><a href='https://khushhalsharma.vercel.app/#portfolio'>Portfolio</a></li>
+            <li><a href='https://khushhalsharma.vercel.app/contact.html'>Contact</a></li>
+        </ul>
+    </div>
+
+
+    <img src="./assets/circle.png" alt="Circle" class="circle">
+
+    <!--contact form-->
+
+    <section class="contact">
+       
+        <img src="./assets/blob.png" alt="Background" class="right-image"/>
+    <img src="./assets/blob.png" alt="Background" class="left-image"/>
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="javascript:void(0)" method="post">
+                <div class="input-row">
+                    <div class="input-container">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+                </div>
+                <button type="submit" id="submit">Send</button>
+            </form>
+        </div>
+        <img src="./assets/ring.png" alt="Ring" class="ring">
+    </section>
+
+    <div class="cookie-banner" id="cookie-banner">
+        <div class="message-container">
+          <div class="message">
+            <span class="tick-icon">✔️</span>
+            Message Sent Successfully
+          </div>
+          <button class="close-button" id="close-button">Close</button>
+        </div>
+      </div>
+      
+
+    <!--Footer-->
+
+    <footer class="footer">
+        <div class="footer-nav">
+            <ul>
+                <li><a href="https://khushhalsharma.vercel.app">Home</a></li>
+                <li><a href='https://khushhalsharma.vercel.app/#about'>About</a></li>
+                <li><a href='https://khushhalsharma.vercel.app/#services'>Services</a></li>
+                <li><a href='https://khushhalsharma.vercel.app/#portfolio'>Portfolio</a></li>
+                <li><a href='https://khushhalsharma.vercel.app/contact.html'>Contact</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            &copy; 2023 Khushhal. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
