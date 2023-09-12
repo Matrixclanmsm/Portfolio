@@ -7,6 +7,7 @@
     <title>Contact Me</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
     <div class="navbar">
@@ -30,7 +31,7 @@
     <img src="./assets/blob.png" alt="Background" class="left-image"/>
         <div class="contact-form">
             <h2>Contact Us</h2>
-            <form action="javascript:void(0)" method="post">
+            <form>
                 <div class="input-row">
                     <div class="input-container">
                         <label for="name">Name</label>
@@ -45,7 +46,7 @@
                     <label for="message">Message</label>
                     <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
                 </div>
-                <button type="submit" id="submit">Send</button>
+                <button type="submit" id="submit" onclick="sendMail()">Send</button>
             </form>
         </div>
         <img src="./assets/ring.png" alt="Ring" class="ring">

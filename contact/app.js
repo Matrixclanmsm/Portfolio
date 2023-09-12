@@ -11,10 +11,37 @@ document.addEventListener('mousemove', (e) => {
     ring.style.transform = `translate(${-xAxis}px, ${-yAxis}px)`;
 });
 
+//On form submit 
+
+(function(){
+  emailjs.init("0736_4Z1GZrHvkpcX");
+})();
+
+
+function sendMail() {
+  var params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+  };
+const serviceId = "service_wsbs7ma";
+const templateId = "template_8yze83j";
+
+emailjs.send(serviceId, templateId, params)
+.then(
+  res=>{
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+    console.log(res);
+  }
+)
+.catch((err) => console.log(err)); 
+}
+
 
 
 //Form Submit
-
 
 // Get the button element and message container
 // Get the cookie banner and close button
